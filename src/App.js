@@ -5,6 +5,10 @@ import Counter from "./03/Counter";
 import NewCounter from "./03/NewCounter";
 import ListExample from "./03/ListExample";
 import Todolist from "./03/Todolist";
+import ScrollSpy from "./03/ScrollSpy";
+import Counter3 from "./03/Counter3";
+import Input from "./03/Input";
+import './sass/materialize.scss';
 
 class MyComponent extends React.Component{
   componentDidUpdate() {
@@ -31,7 +35,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.listValue = [{name:'Park'}, {name:'Lee'}];
-    this.state={count: 10 ,version : 0};
+    this.state={count: 1 ,version : 0};
     this.handleClick = this.handleClick.bind(this);
     this.resetCount = this.resetCount.bind(this);
   }
@@ -62,9 +66,25 @@ class App extends Component {
         <button onClick={this.handleClick}>버튼</button>
         <ListExample></ListExample>
         <Todolist></Todolist>
+        <ScrollSpy></ScrollSpy>
+        <Counter3></Counter3>
+        <Input name={'황성욱'}></Input>
       </div>
     );
   }
 }
-
-export default App;
+class App2 extends Component{
+    render() {
+        return(
+            <div>
+                <nav>
+                    <div className="nav-wrapper">
+                        <div>두잇! 리액트 시작하기</div>
+                    </div>
+                </nav>
+                <h1>머티리얼</h1>
+            </div>
+        )
+    }
+}
+export default App2;
