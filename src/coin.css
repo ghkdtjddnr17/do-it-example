@@ -1,0 +1,36 @@
+#coinNum1 {
+  width: 300px;
+  margin-left: 50px;
+  margin-top: 30px;
+  border: 1px solid #eee;
+}
+#coinNum2 {
+  width: 300px;
+  margin-left: 50px;
+  margin-top: 30px;
+  border: 1px solid #eee;
+}
+.text > div {
+  width: 300px;
+  display: inline-block;
+  margin-left: 50px;
+  margin-top: 50px;
+  text-align: center;
+}
+.inputBox {
+  /* margin-left: 50px; */
+
+  display: inline-block;
+}
+.avgNum {
+  display: inline-block;
+  margin-left: 45px;
+  width: 300px;
+  text-align: center;
+}
+.lastNum {
+  width: 300px;
+  text-align: center;
+  margin-left: 50px;
+  display: inline-block;
+}

@@ -9,6 +9,15 @@ import ScrollSpy from "./03/ScrollSpy";
 import Counter3 from "./03/Counter3";
 import Input from "./03/Input";
 import './sass/materialize.scss';
+import Debounce from './02/debounce';
+import Throttle from './02/Throttle';
+import HomePageComponent from './06/HomePageComponent';
+import { Route } from 'react-router';
+import Home from './Home';
+import About from './About';
+import { Link } from 'react-router-dom';
+import Profile from './Profile';
+import Coin from './Coin'
 
 class MyComponent extends React.Component{
   componentDidUpdate() {
@@ -77,14 +86,44 @@ class App2 extends Component{
     render() {
         return(
             <div>
-                <nav>
-                    <div className="nav-wrapper">
-                        <div>두잇! 리액트 시작하기</div>
-                    </div>
-                </nav>
-                <h1>머티리얼</h1>
+               <HomePageComponent></HomePageComponent>
             </div>
         )
     }
 }
-export default App2;
+
+class App3 extends Component{
+  render(){
+    return(
+      <>
+      <div>
+        <ul>
+          <li>
+            <Link to="/">홈</Link>
+          </li>
+          <li>
+            <Link to="/about">어바웃</Link>
+          </li>
+        </ul>
+      </div>
+      <Route exact={true} path="/" component={Home}></Route>
+      <Route path="/about" component={About}></Route>
+      <Route path="/profiles/:username" component={Profile} />
+
+      </>
+    )
+  }
+}
+
+class App4 extends Component{
+  render(){
+    return(
+      <>
+      <div>
+       <Coin></Coin>
+      </div>
+      </>
+    )
+  }
+}
+export default App4;

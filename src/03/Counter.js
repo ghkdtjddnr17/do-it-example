@@ -14,6 +14,8 @@ class Counter extends Component {
         this.setState(({count})=>({
             count: count + 1
         }));// 증가 함수 setState로 state값 변경
+
+        console.log(this.props);
     }
     render() {
         return (

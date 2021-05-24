@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 class Input extends Component {
     constructor(props) {
         super(props);
+        
         this.setRef = this.setRef.bind(this);
         this.handleClick = this.handleClick.bind(this);
     }
